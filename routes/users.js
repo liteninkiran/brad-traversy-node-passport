@@ -9,8 +9,7 @@ router.get('/register', (req, res) => res.render('register'));
 
 // Register
 router.post('/register', (req, res) => {
-    console.log(req.body);
-    res.send('Hello');
+    const { name, email, password, password2 } = req.body;
 });
 
 module.exports = router;
