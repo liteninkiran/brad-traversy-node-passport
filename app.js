@@ -7,6 +7,7 @@ const app = express();
 
 const port = process.env.PORT || 5000;
 
+// DB Config
 const db = require('./config/keys').mongoURI;
 
 // Connect to MongoDB
@@ -21,6 +22,9 @@ mongoose
 // EJS
 app.use(expressLayouts);
 app.set('view engine', 'ejs');
+
+// Express body parser
+app.use(express.urlencoded({ extended: false }));
 
 // Routes
 app.use('/', require('./routes/index.js'));
