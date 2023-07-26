@@ -25,7 +25,9 @@ router.post('/register', (req, res) => {
     }
 
     if (errors.length > 0) {
+        res.render('register', {
 
+        });
     } else {
         res.send('pass');
     }
